@@ -1,72 +1,73 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 abstract class TextStyles {
-  static const TextStyle bold13 = TextStyle(
+  static  TextStyle bold13 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 13,
+    fontSize: 13.sp,
   );
-  static const TextStyle bold23 = TextStyle(
+  static  TextStyle bold23 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 23,
+    fontSize: 23.sp,
   );
 
-  static const TextStyle semiBold13 = TextStyle(
+  static  TextStyle semiBold13 = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 13,
+    fontSize: 13.sp,
   );
 
-  static const TextStyle regular13 = TextStyle(
+  static  TextStyle regular13 = TextStyle(
     fontWeight: FontWeight.normal,
-    fontSize: 13,
+    fontSize: 13.sp,
   );
 
-  static const TextStyle bold16 = TextStyle(
+  static  TextStyle bold16 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 16,
+    fontSize: 16.sp,
   );
 
-  static const TextStyle bold19 = TextStyle(
+  static  TextStyle bold19 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 19,
+    fontSize: 19.sp,
   );
 
-  static const TextStyle semiBold16 = TextStyle(
+  static  TextStyle semiBold16 = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 16,
+    fontSize: 16.sp,
   );
 
-  static const TextStyle bold28 = TextStyle(
+  static  TextStyle bold28 = TextStyle(
     fontWeight: FontWeight.bold,
-    fontSize: 28,
+    fontSize: 28.sp,
   );
 
-  static const TextStyle regular22 = TextStyle(
+  static  TextStyle regular22 = TextStyle(
     fontWeight: FontWeight.normal,
-    fontSize: 22,
+    fontSize: 22.sp,
   );
 
-  static const TextStyle semiBold11 = TextStyle(
+  static  TextStyle semiBold11 = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 11,
+    fontSize: 11.sp,
   );
 
-  static const TextStyle medium15 = TextStyle(
+  static  TextStyle medium15 = TextStyle(
     fontWeight: FontWeight.w500,
-    fontSize: 15,
+    fontSize: 15.sp,
   );
 
-  static const TextStyle regular26 = TextStyle(
+  static  TextStyle regular26 = TextStyle(
     fontWeight: FontWeight.normal,
-    fontSize: 26,
+    fontSize: 26.sp,
   );
 
-  static const TextStyle regular16 = TextStyle(
+  static  TextStyle regular16 = TextStyle(
     fontWeight: FontWeight.normal,
-    fontSize: 16,
+    fontSize: 16.sp,
   );
 
-  static const TextStyle regular11 = TextStyle(
+  static  TextStyle regular11 = TextStyle(
     fontWeight: FontWeight.normal,
-    fontSize: 11,
+    fontSize: 11.sp,
   );
 }

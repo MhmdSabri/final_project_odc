@@ -1,4 +1,5 @@
-import 'package:final_project_odc/core/services/shared_preferences_dingleton.dart';
+
+import 'package:final_project_odc/core/services/shared_preferences_singleton.dart';
 import 'package:final_project_odc/core/utils/app_images.dart';
 import 'package:final_project_odc/features/auth/presentation/views/signin_view.dart';
 import 'package:final_project_odc/features/on_boarding/presentation/view/on_boarding_view.dart';

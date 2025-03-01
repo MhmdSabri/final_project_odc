@@ -1,9 +1,9 @@
-import 'package:final_project_odc/core/utils/app_color.dart';
+import 'package:final_project_odc/core/utils/app_colors.dart';
 import 'package:final_project_odc/core/utils/app_text_styles.dart';
 import 'package:final_project_odc/features/auth/presentation/views/widgets/custom_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TermsAndConditionsWidget extends StatefulWidget {
   const TermsAndConditionsWidget({super.key, required this.onChanged});
@@ -28,8 +28,8 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
           },
           isChecked: isTermsAccepted,
         ),
-        const SizedBox(
-          width: 16,
+         SizedBox(
+          width: 16.h,
         ),
         Expanded(
           child: Text.rich(
@@ -44,27 +44,27 @@ class _TermsAndConditionsWidgetState extends State<TermsAndConditionsWidget> {
                 TextSpan(
                   text: 'الشروط والأحكام',
                   style: TextStyles.semiBold13.copyWith(
-                    color: AppColor.lightPrimaryColor,
+                    color: AppColors.lightPrimaryColor,
                   ),
                 ),
-                const TextSpan(
+                TextSpan(
                   text: ' ',
                   style: TextStyles.semiBold13,
                 ),
                 TextSpan(
                   text: 'الخاصة',
                   style: TextStyles.semiBold13.copyWith(
-                    color: AppColor.lightPrimaryColor,
+                    color: AppColors.lightPrimaryColor,
                   ),
                 ),
-                const TextSpan(
+                TextSpan(
                   text: ' ',
                   style: TextStyles.semiBold13,
                 ),
                 TextSpan(
                   text: 'بنا',
                   style: TextStyles.semiBold13
-                      .copyWith(color: AppColor.lightPrimaryColor),
+                      .copyWith(color: AppColors.lightPrimaryColor),
                 ),
               ],
             ),

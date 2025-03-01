@@ -1,0 +1,12 @@
+
+
+import 'package:final_project_odc/core/models/review_model.dart';
+
+
+num getAvgRating(List<ReviewModel> reviews) {
+  var sum = 0.0;
+  for (var review in reviews) {
+    sum += review.ratting;
+  }
+  return sum / reviews.length;
+}

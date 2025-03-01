@@ -1,41 +1,43 @@
-import 'package:final_project_odc/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class PassworsField extends StatefulWidget {
-  const PassworsField({
+import 'custom_text_field.dart';
+
+class PasswordField extends StatefulWidget {
+  const PasswordField({
     super.key,
     this.onSaved,
   });
+
   final void Function(String?)? onSaved;
 
   @override
-  State<PassworsField> createState() => _PassworsFieldState();
+  State<PasswordField> createState() => _PasswordFieldState();
 }
 
-class _PassworsFieldState extends State<PassworsField> {
+class _PasswordFieldState extends State<PasswordField> {
   bool obscureText = true;
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
-        obscureText: obscureText,
-        onSaved: widget.onSaved,
-        suffixIcon: GestureDetector(
-          onTap: () {
-            setState(() {
-              obscureText = !obscureText;
-            });
-          },
-          child: obscureText
-              ? const Icon(
-                  Icons.remove_red_eye,
-                  color: Color(0xFFC9CECF),
-                )
-              : const Icon(
-                  Icons.visibility_off,
-                  color: Color(0xFFC9CECF),
-                ),
-        ),
-        hintText: 'كلمة المرور ',
-        textInputType: TextInputType.visiblePassword);
+      obscureText: obscureText,
+      onSaved: widget.onSaved,
+      suffixIcon: GestureDetector(
+        onTap: () {
+          obscureText = !obscureText;
+          setState(() {});
+        },
+        child: obscureText
+            ? const Icon(
+                Icons.remove_red_eye,
+                color: Color(0xffC9CECF),
+              )
+            : const Icon(
+                Icons.visibility_off,
+                color: Color(0xffC9CECF),
+              ),
+      ),
+      hintText: 'كلمة المرور',
+      textInputType: TextInputType.visiblePassword,
+    );
   }
 }

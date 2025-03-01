@@ -2,12 +2,14 @@ import 'package:final_project_odc/constants.dart';
 import 'package:final_project_odc/core/helper_functions/build_error_bar.dart';
 import 'package:final_project_odc/core/widgets/custom_button.dart';
 import 'package:final_project_odc/core/widgets/custom_text_field.dart';
-import 'package:final_project_odc/core/widgets/password_field.dart';
 import 'package:final_project_odc/features/auth/presentation/cubits/signup_cubits/signup_cubit.dart';
 import 'package:final_project_odc/features/auth/presentation/views/widgets/have_an_account_widget.dart';
 import 'package:final_project_odc/features/auth/presentation/views/widgets/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../core/widgets/password_field.dart';
 
 class SignupViewBody extends StatefulWidget {
   const SignupViewBody({super.key});
@@ -27,14 +29,14 @@ class _SignupViewBodyState extends State<SignupViewBody> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: KHorizintalPadding),
+        padding: const EdgeInsets.symmetric(horizontal: kHorizintalPadding),
         child: Form(
           key: formKey,
           autovalidateMode: autovalidateMode,
           child: Column(
             children: [
-              const SizedBox(
-                height: 24,
+               SizedBox(
+                height: 24.h,
               ),
               CustomTextFormField(
                   onSaved: (value) {
@@ -42,8 +44,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   },
                   hintText: 'الاسم كامل',
                   textInputType: TextInputType.name),
-              const SizedBox(
-                height: 16,
+               SizedBox(
+                height: 16.h,
               ),
               CustomTextFormField(
                   onSaved: (value) {
@@ -51,24 +53,24 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                   },
                   hintText: 'البريد الإلكتروني',
                   textInputType: TextInputType.emailAddress),
-              const SizedBox(
-                height: 16,
+               SizedBox(
+                height: 16.h,
               ),
-              PassworsField(
+              PasswordField(
                 onSaved: (value) {
                   password = value!;
                 },
               ),
-              const SizedBox(
-                height: 16,
+               SizedBox(
+                height: 16.h,
               ),
               TermsAndConditionsWidget(
                 onChanged: (value) {
                   isTermsAccepted = value;
                 },
               ),
-              const SizedBox(
-                height: 25,
+               SizedBox(
+                height: 30.h,
               ),
               CustomButton(
                 onPressed: () {
@@ -78,10 +80,12 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                       context
                           .read<SignupCubit>()
                           .createUserWithEmailAndPassword(
-                              email, password, userName);
+                            email,
+                            password,
+                            userName,
+                          );
                     } else {
-                      buildErrorBar(
-                          context, 'يجب الموافقة على الشروط والأحكام');
+                      showBar(context, 'يجب عليك الموافقة على الشروط والإحكام');
                     }
                   } else {
                     setState(() {
@@ -91,8 +95,8 @@ class _SignupViewBodyState extends State<SignupViewBody> {
                 },
                 text: 'إنشاء حساب جديد',
               ),
-              const SizedBox(
-                height: 15,
+               SizedBox(
+                height: 26.h,
               ),
               const HaveAnAccountWidget(),
             ],

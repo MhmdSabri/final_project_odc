@@ -1,7 +1,8 @@
 import 'package:final_project_odc/constants.dart';
-import 'package:final_project_odc/core/services/shared_preferences_dingleton.dart';
+import 'package:final_project_odc/core/services/shared_preferences_singleton.dart';
 import 'package:final_project_odc/features/auth/presentation/views/signin_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PageViewItem extends StatelessWidget {
@@ -50,7 +51,7 @@ class PageViewItem extends StatelessWidget {
                         .pushReplacementNamed(SigninView.routeName);
                   },
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    padding:  EdgeInsets.symmetric(horizontal: 10.w),
                     child: const Text("تخط"),
                   ),
                 ),
@@ -58,11 +59,11 @@ class PageViewItem extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 64),
+         SizedBox(height: 64.h),
         title,
-        const SizedBox(height: 24),
+         SizedBox(height: 24.h),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding:  EdgeInsets.symmetric(horizontal: 16.w),
           child: Text(
             subTitle,
             textAlign: TextAlign.center,

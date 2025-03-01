@@ -1,6 +1,7 @@
 import 'package:final_project_odc/core/utils/app_images.dart';
 import 'package:final_project_odc/features/on_boarding/presentation/view/widgets/page_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingPageView extends StatelessWidget {
   const OnBoardingPageView({super.key, required this.pageController});
@@ -39,7 +40,7 @@ class OnBoardingPageView extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Color(0xff0C0D0D),
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.w700,
                   height: 0)),
         ),

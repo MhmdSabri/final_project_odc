@@ -1,9 +1,8 @@
-
-
-import 'package:final_project_odc/core/utils/app_color.dart';
-import 'package:final_project_odc/core/utils/app_text_styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
 
 class HaveAnAccountWidget extends StatelessWidget {
   const HaveAnAccountWidget({
@@ -34,7 +33,7 @@ class HaveAnAccountWidget extends StatelessWidget {
               },
             text: 'تسجيل الدخول',
             style:
-                TextStyles.semiBold16.copyWith(color: AppColor.primaryColor),
+                TextStyles.semiBold16.copyWith(color: AppColors.primaryColor),
           ),
         ],
       ),

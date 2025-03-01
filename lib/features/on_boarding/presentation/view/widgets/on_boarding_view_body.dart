@@ -1,11 +1,12 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:final_project_odc/constants.dart';
-import 'package:final_project_odc/core/services/shared_preferences_dingleton.dart';
+import 'package:final_project_odc/core/services/shared_preferences_singleton.dart';
 import 'package:final_project_odc/core/utils/app_color.dart';
 import 'package:final_project_odc/core/widgets/custom_button.dart';
 import 'package:final_project_odc/features/auth/presentation/views/signin_view.dart';
 import 'package:final_project_odc/features/on_boarding/presentation/view/widgets/on_boarding_page_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -54,18 +55,18 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 : AppColor.primaryColor.withOpacity(0.5),
             activeColor: AppColor.primaryColor,
             activeShape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
+              borderRadius: BorderRadius.circular(5.w),
             ),
           ),
         ),
-        const SizedBox(height: 10),
+         SizedBox(height: 10.h),
         Visibility(
           visible: currentPage == 1 ? true : false,
           maintainAnimation: true,
           maintainSize: true,
           maintainState: true,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: KHorizintalPadding),
+            padding: EdgeInsets.symmetric(horizontal: kHorizintalPadding),
             child: CustomButton(
                 onPressed: () {
                   Prefs.setBool(kIsOnBoardingViewSeen, true);
@@ -76,7 +77,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 text: "ابدأ الان"),
           ),
         ),
-        const SizedBox(height: 25),
+         SizedBox(height: 25.h),
       ],
     );
   }
