@@ -3,7 +3,7 @@ import 'package:final_project_odc/constants.dart';
 import 'package:final_project_odc/core/services/shared_preferences_dingleton.dart';
 import 'package:final_project_odc/core/utils/app_color.dart';
 import 'package:final_project_odc/core/widgets/custom_button.dart';
-import 'package:final_project_odc/features/auth/presentation/views/login_view.dart';
+import 'package:final_project_odc/features/auth/presentation/views/signin_view.dart';
 import 'package:final_project_odc/features/on_boarding/presentation/view/widgets/on_boarding_page_view.dart';
 import 'package:flutter/material.dart';
 
@@ -71,7 +71,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   Prefs.setBool(kIsOnBoardingViewSeen, true);
 
                   Navigator.of(context)
-                      .pushReplacementNamed(LoginView.routeName);
+                      .pushReplacementNamed(SigninView.routeName);
                 },
                 text: "ابدأ الان"),
           ),

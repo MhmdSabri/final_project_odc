@@ -1,6 +1,6 @@
 import 'package:final_project_odc/core/services/shared_preferences_dingleton.dart';
 import 'package:final_project_odc/core/utils/app_images.dart';
-import 'package:final_project_odc/features/auth/presentation/views/login_view.dart';
+import 'package:final_project_odc/features/auth/presentation/views/signin_view.dart';
 import 'package:final_project_odc/features/on_boarding/presentation/view/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -44,7 +44,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(Duration(seconds: 3), () {
       if(isOnBoardingViewSeen){
         
-      Navigator.pushReplacementNamed(context, LoginView.routeName);
+      Navigator.pushReplacementNamed(context, SigninView.routeName);
       }else{
         Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
       }

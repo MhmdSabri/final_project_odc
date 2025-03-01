@@ -21,12 +21,12 @@ class CustomTextFormField extends StatelessWidget {
     return TextFormField(
       obscureText: obscureText,
       onSaved: onSaved,
-      // validator: (value) {
-      //   if (value == null || value.isEmpty) {
-      //     return 'هذا الحقل مطلوب';
-      //   }
-      //   return null;
-      // },
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'هذا الحقل مطلوب';
+        }
+        return null;
+      },
       keyboardType: textInputType,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,

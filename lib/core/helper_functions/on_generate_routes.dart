@@ -1,4 +1,4 @@
-import 'package:final_project_odc/features/auth/presentation/views/login_view.dart';
+import 'package:final_project_odc/features/auth/presentation/views/signin_view.dart';
 import 'package:final_project_odc/features/auth/presentation/views/signup_view.dart';
 import 'package:final_project_odc/features/on_boarding/presentation/view/on_boarding_view.dart';
 import 'package:final_project_odc/features/splash/presentation/views/splash_view.dart';
@@ -9,8 +9,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case SplashView.routeName:
       return MaterialPageRoute(builder: (_) => const SplashView());
 
-case LoginView.routeName:
-      return MaterialPageRoute(builder: (_) => const LoginView());
+case SigninView.routeName:
+      return MaterialPageRoute(builder: (_) => const SigninView());
 
    case SignupView.routeName:
       return MaterialPageRoute(builder: (_) => const SignupView());   
